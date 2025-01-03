@@ -92,3 +92,8 @@ h2 {
 .selected {
     color: hsl(25, 97%, 53%);
 }
+
+button:hover {
+    background-color: #555;
+    color: orange;
+  }
