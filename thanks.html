@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thanks</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
 </head>
 <body>
-    <article class="thanks">
-        <img src="images/illustration-thank-you.svg" class="you">
-        <p class="selected">You selected <!-- Add rating here --> out of 5</p>
-      
-        <h2>Thank you!</h2>
-        
-        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-        don’t hesitate to get in touch!</p>
-      </article>  
-        <!-- Thank you state end -->
-        
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="#">George Krause</a>.
-        </div>
-        <script src="script.js"></script>
+  <div class="thanks-message">
+    <h2>Thank you!</h2>
+    <p id="ratingDisplay"></p>
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const rating = urlParams.get('rating');
+      const ratingDisplay = document.getElementById('ratingDisplay');
+      ratingDisplay.textContent = `You selected ${rating} out of 5`;
+    });
+  </script>
 </body>
 </html>
